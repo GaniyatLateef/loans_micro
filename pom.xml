@@ -11,6 +11,7 @@
 	<groupId>com.EazyBank</groupId>
 	<artifactId>loans</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging> jar</packaging>
 	<name>loans</name>
 	<description>Loans Microservice</description>
 	<url/>
@@ -87,8 +88,13 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<image>
+						<name>galatex/${project.artifactId}:1.0</name>
+					</image>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
